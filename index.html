@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fadiyya</title>
+    <meta
+      name="description"
+      content="Explore the romantic journey of Fadiyya with a modern, elegant, and beautifully designed website."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Pastikan Font Awesome sudah ditambahkan jika menggunakan icon dari Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4C+XoF5t4JmkY+Jw1pRz5H6z4rR5j7C9qF6lK/JB6GjnL6J7xD1gjF0WlOVK6f6V8pKdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Welcome Page -->
+    <section class="welcome-page">
+      <div class="welcome-container">
+        <h1 class="welcome-title">Welcome To My Website</h1>
+        <h2 class="welcome-subtitle">This Website Was Made For Fadiyya</h2>
+        <!-- Icon diubah menjadi satu icon love -->
+        <div class="icons">
+          <i class="fas fa-heart"></i>
+        </div>
+        <p class="website-link">By Taqy Nabil Adriano</p>
+      </div>
+    </section>
+
+    <!-- Seluruh konten utama dibungkus dalam satu container dan disembunyikan dulu -->
+    <div class="site-wrapper" style="display: none">
+      <!-- Header -->
+      <header>
+        <div class="container header-container">
+          <div class="logo">
+            <a href="#"
+              >Fadiyya <span class="heart" aria-hidden="true">&#10084;</span></a
+            >
+          </div>
+          <nav>
+            <button
+              class="hamburger"
+              id="hamburger"
+              aria-label="Toggle Navigation"
+              aria-expanded="false"
+            >
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#profile">Profile</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#valentine">End</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Hero Section / Welcome Page -->
+      <section id="home" class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="overlay"></div>
+        <div class="container hero-content fade">
+          <h1 class="hero-title">Fadiyya Titania</h1>
+          <p class="hero-subtitle">This Website Was Made for Fadiyya</p>
+          <a href="#profile" class="btn">Discover More</a>
+          <div class="scroll-down" id="scrollDown">
+            <span class="arrow">&#8595;</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Profile Section -->
+      <section id="profile" class="profile-section fade">
+        <div class="container profile-content">
+          <div class="profile-image">
+            <img src="images/profile_fadiyya.jpg" alt="Portrait of Fadiyya" />
+          </div>
+          <div class="profile-text">
+            <h2>About Fadiyya</h2>
+            <p>
+              Fadiyya, the girl I met in middle school, had such a cheerful,
+              fun, wibu (BAU BAWANG JIR) – smart and super energetic. That was
+              my first impression of her. Who would've thought we'd end up
+              together for three years? Even though we went through our fair
+              share of problems, we stuck together and never broke up. I made
+              this website just for her as a way to say thanks and show my
+              endless love even though sometimes dia kaya anjing. Because it's
+              only with her that I can share so much. I'm sorry if this website
+              still has lots of flaws, but it's made with all my heart.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section id="gallery" class="gallery-section fade">
+        <div class="container">
+          <h2>Photo Gallery</h2>
+          <p class="section-description">Some Photos With Her</p>
+          <div class="gallery-grid">
+            <figure class="gallery-item">
+              <img
+                src="images/pengabdi_setan.jpg"
+                alt="First Date with Fadiyya"
+              />
+              <figcaption>First Date (both of us very shy haha)</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="images/ketemu_pertama.jpg" alt="Romantic Walk" />
+              <figcaption>
+                First Picture At Junior High School HAHAHA
+              </figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="images/photobooth.jpg" alt="Unforgettable Moment" />
+              <figcaption>PhotoBooth</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="images/game.jpg" alt="Romantic Walk" />
+              <figcaption>
+                Main Capit Boneka Gagal Mulu HAHAHA (Cantiknya)
+              </figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="images/fadiyya.jpg" alt="Romantic Walk" />
+              <figcaption>Going To The Mall</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <!-- Perhatikan nama file: tidak ada spasi -->
+              <img src="images/coffe_shop.jpg" alt="Romantic Walk" />
+              <figcaption>Going To The Coffeeshop</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="images/coklat_impian.jpg" alt="Romantic Walk" />
+              <figcaption>Buying Some Chocolate</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="images/photobooth2.jpg" alt="Romantic Walk" />
+              <figcaption>PhotoBooth Againn</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="images/Her_Chillhood.jpg" alt="Romantic Walk" />
+              <figcaption>Her Childhood Photo HAHAHA</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="images/nnton.jpg" alt="Romantic Walk" />
+              <figcaption>
+                WATCHING A MOVIE (WHEN STILL IN JUNIOR HIGH SCHOOL)
+              </figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="images/monyet.jpg" alt="Romantic Walk" />
+              <figcaption>monyet lepas &#128053;&#128053;</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="images/tes.jpg" alt="Romantic Walk" />
+              <figcaption>Date Againn</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Valentine Section -->
+      <section id="valentine" class="valentine-section fade">
+        <div class="container">
+          <h2>Thanks For Fadiyya</h2>
+          <p class="section-description">
+            Makasih ye njink udh jd cwe baik buat gua
+          </p>
+          <div class="valentine-content">
+            <p class="valentine-message">lopyu &#10084;</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <div class="container footer-content">
+          <p>&copy; 2025 This Website Was Made By Taqy for Fadiyya</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

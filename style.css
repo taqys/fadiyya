@@ -1,0 +1,486 @@
+/* ===================== */
+/* Welcome Page (Tema Pink) */
+/* ===================== */
+.welcome-page {
+  position: fixed; /* Tetap di layar */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  color: white;
+  text-align: center;
+  z-index: 9999; /* Pastikan di atas seluruh konten */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+}
+
+.welcome-container {
+  animation: fadeIn 3s ease-out forwards, slideIn 2s ease-out forwards;
+}
+
+.welcome-title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.welcome-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.icons {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.icons i {
+  transition: transform 0.3s ease;
+}
+
+.icons i:hover {
+  transform: scale(1.2);
+  color: #06bcee;
+}
+
+.website-link {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: #a1c4fd;
+}
+
+/* Animasi Fade-In dan Slide-In */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ===================== */
+/* Reset & Global Styles */
+/* ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #ff6f91;
+  --secondary-color: #333;
+  --light-color: #fff;
+  --accent-color: #ff9671;
+  --overlay-color: rgba(0, 0, 0, 0.4);
+  --transition-speed: 0.4s;
+  --font-heading: "Dancing Script", cursive;
+  --font-body: "Roboto", sans-serif;
+}
+body {
+  font-family: var(--font-body);
+  background: var(--light-color);
+  color: var(--secondary-color);
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* ===================== */
+/* Header */
+/* ===================== */
+header {
+  background: var(--primary-color);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.logo a {
+  color: var(--light-color);
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: var(--font-heading);
+}
+.logo .heart {
+  color: #ff4757;
+  margin-left: 5px;
+  font-size: 1.4rem;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Navigation */
+nav {
+  position: relative;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+.nav-links li {
+  margin-left: 30px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: var(--light-color);
+  font-weight: bold;
+  transition: color var(--transition-speed);
+}
+.nav-links li a:hover {
+  color: var(--accent-color);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.hamburger .bar {
+  height: 3px;
+  width: 25px;
+  background-color: var(--light-color);
+  margin: 4px 0;
+  transition: all 0.3s;
+}
+
+/* ===================== */
+/* Hero Section */
+/* ===================== */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 154, 158, 0.8) 0%,
+    rgba(250, 208, 196, 0.8) 100%
+  );
+}
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background: url("images/kaki.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+  transform: translateY(-10%);
+  filter: brightness(0.65);
+  z-index: 1;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--overlay-color);
+  z-index: 2;
+}
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: var(--light-color);
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  animation: fadeInUp 1s ease-out;
+}
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-family: var(--font-heading);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+.scroll-down {
+  margin-top: 20px;
+  animation: bounce 1.5s infinite;
+  cursor: pointer;
+}
+.scroll-down .arrow {
+  font-size: 2rem;
+  color: var(--light-color);
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* ===================== */
+/* Button */
+/* ===================== */
+.btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--light-color);
+  padding: 10px 20px;
+  border: 2px solid var(--light-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background var(--transition-speed), color var(--transition-speed);
+  border-radius: 5px;
+}
+.btn:hover {
+  background: var(--light-color);
+  color: var(--primary-color);
+}
+
+/* ===================== */
+/* Profile Section */
+/* ===================== */
+.profile-section {
+  background: #fff0f6;
+  padding: 100px 0;
+  margin-top: 70px;
+}
+.profile-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+.profile-image {
+  flex: 1;
+  max-width: 400px;
+  text-align: center;
+}
+.profile-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.profile-text {
+  flex: 1;
+  max-width: 600px;
+}
+.profile-text h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-family: var(--font-heading);
+}
+.profile-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* ===================== */
+/* Gallery Section */
+/* ===================== */
+.gallery-section {
+  padding: 100px 0;
+  background: var(--light-color);
+}
+.gallery-section h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-family: var(--font-heading);
+}
+.section-description {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-speed),
+    box-shadow var(--transition-speed);
+}
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  display: block;
+  background: #fff;
+}
+.gallery-item figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--light-color);
+  padding: 10px;
+  text-align: center;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity var(--transition-speed);
+}
+.gallery-item:hover figcaption {
+  opacity: 1;
+}
+
+/* ===================== */
+/* Valentine Section */
+/* ===================== */
+.valentine-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #fda085 0%, #f6d365 100%);
+  color: var(--light-color);
+  text-align: center;
+}
+.valentine-section h2 {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+.valentine-section .section-description {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+.valentine-content {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  border-radius: 10px;
+  display: inline-block;
+}
+.valentine-message {
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+/* ===================== */
+/* Footer */
+/* ===================== */
+footer {
+  background: var(--primary-color);
+  color: var(--light-color);
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* ===================== */
+/* Animasi Fade-In & Slide-Up */
+/* ===================== */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===================== */
+/* Responsif */
+/* ===================== */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .nav-links {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    width: 100%;
+    background: var(--primary-color);
+    text-align: center;
+    transition: left 0.3s ease-in-out;
+    z-index: 99;
+  }
+  .nav-links li {
+    margin: 15px 0;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .nav-links.active {
+    left: 0;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
